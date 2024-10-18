@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair", serif;
+
+}
+
+body{
+    background: #74b4d6;
+}
+.container{
+    width: 600px;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #e1e1e1;
+    padding: 40px;
+    transform: translate(-50% ,-50%);
+    text-align: center;
+    border-radius: 30px;
+}
+.container h2{
+    font-size: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+.container h2::after{
+    content: "";
+    width: 150px;
+    height: 3px;
+    border-radius: 3px;
+    background: rgb(23, 124, 229);
+    position: absolute;
+    bottom: -10px;
+    left: 35%;
+    transform: translate((-50%));
+}
+blockquote{
+    font-size: 30px;
+    min-height: 100px;
+}
+blockquote::before , blockquote::after{
+    content: '"';
+
+}
+span{
+    display: block;
+    margin-top: 10px;
+    float: right;
+    position: relative;
+    font-size: 20px;
+}
+span::before{
+    content: '';
+    width: 20px;
+    height: 3px;
+    position: absolute;
+    background: rgb(23, 124, 229);
+    top: 50%;
+    left: -30px;
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button{
+    border: none;
+    background: rgb(23, 124, 229);
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 10px;
+}
+
+
+/* ------------------------------ */
+@media (max-width: 700px) {
+    .container {
+        padding: 25px;
+        width: 450px;
+
+    }
+    .container h2::after{
+        left: 30%;
+       
+    }
+
+    .container h2 {
+        font-size: 35px
+    }
+
+    blockquote {
+        font-size: 26px;
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    button {
+        max-width: 90px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+/* For devices with max-width 480px (small phones) */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        width: 300px;
+    }
+    .container h2::after{
+        width: 100px;
+       
+       
+    }
+    .container h2 {
+        font-size: 25px;
+    }
+
+    blockquote {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 15px;
+    }
+
+    button {
+        max-width: 80px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
